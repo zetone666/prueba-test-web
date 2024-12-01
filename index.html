@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="es">
+<meta name="Author" content="David Benitez">
+<meta NAME="description" CONTENT="Esto es un ejercicio de clase">
+<meta NAME="keywords" CONTENT="ejercicio, codigo, html">
+<style>
+    .imagen-izquierda {
+        width: 50%; 
+        height: auto; 
+        margin-bottom: 20px;
+        margin-right: 800px;
+    }
+    .imagen-centro {
+        display: block;
+        margin: 0 auto;
+        width: 40%;
+        height: auto;
+    }
+    .imagen-derecha {
+        float: right;
+        margin-right: 10px;
+        width: 40%;
+        height: auto;
+    }
+
+    /* Estilo de alto contraste para la nueva sección */
+    .seccion-alto-contraste {
+        background-color: black; /* Fondo negro */
+        color: white; /* Texto blanco */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .seccion-alto-contraste a {
+        color: yellow; /* Enlaces en amarillo */
+        text-decoration: none;
+    }
+
+    .seccion-alto-contraste a:hover {
+        text-decoration: underline;
+    }
+</style>
+<title>
+David Benitez - Ilustraciones únicas, diseños personalizados 
+</title>
+</head>
+<body>
+ <!-- Imagen con atributo alt, importante para la accesibilidad visual -->
+ <img src="https://viajes.nationalgeographic.com.es/medio/2019/10/25/llanuras-y-bosques_9dbd77da_1258x833.jpg" alt="Llanura con bisontes en el Parque Nacional de Yellowstone" aria-describedby="descripcion-imagen1">
+ <!-- Descripción de la imagen -->
+ <p id="descripcion-imagen1">Llanura con bisontes en el Parque Nacional de Yellowstone</p>
+
+ <!-- Menú de navegación, se agrega role="navigation" que define el tipo de un elemento y su función en la interfaz. Y aria label proporciona una descripción textual, que puede ser leído por los lectores de pantalla -->
+ <h1>Menú</h1>
+ <nav role="navigation" aria-label="Menú de navegación principal">
+    <video width="560" height="315" controls aria-label="Video sobre el Parque Yellowstone">
+        <source src="yellowstone.mp4" type="video/mp4">
+        <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default>
+    </video>
+ </nav>
+
+ <!-- Contenido de audio con aria-label para mejorar la comprensión -->
+ <audio controls aria-label="Sonido ambiental del bosque">
+     <source src="sonido-bosque.mp3" type="audio/mp3">
+ </audio>
+
+ <!-- Imagen con CSS y uso del atributo alt. El atributo aria-describedby se utiliza para asociar un elemento con otro que contiene información adicional sobre él. Este atributo proporciona una referencia a un elemento que describe un objeto o acción, y los lectores de pantalla leerán ese contenido cuando interactúen con el primer elemento.-->
+ <img src="alcornocal-1.jpg" alt="Parque del Alcornocal Cádiz" class="imagen-izquierda" aria-describedby="descripcion-imagen2">
+ <p id="descripcion-imagen2">Parque del Alcornocal en Cádiz, mostrando una vista del paisaje natural.</p>
+
+ <br>
+ <h1>Conoce aquí las mejores rutas del parque</h1>
+ <br>
+
+ <!-- Imagen interactiva con mapa, se añade aria-label y role="graphics-document" -->
+ <img src="ruta-mapa-parque.gif" alt="Mapa del parque con rutas" usemap="#mapaParque" aria-label="Mapa interactivo con rutas destacadas" role="graphics-document"> 
+ <map name="mapaParque">
+    <area shape="circle" coords="614,375,50" href="https://www.rutasaldesierto.com/" alt="Ruta 1 desierto" aria-label="Ruta 1 hacia el desierto">
+    <area shape="circle" coords="759,187,50" href="https://www.ruralsierrasol.es/5-rutas-de-senderismo-para-realizar-en-el-bosque/" alt="Ruta 2 bosque" aria-label="Ruta 2 hacia el bosque">
+    <area shape="circle" coords="994,92,50" href="https://www.turismoasturias.es/descubre/naturaleza/rutas/senderismo/ruta-de-los-lagos-covadonga-" alt="Ruta 3 lago" aria-label="Ruta 3 hacia el lago">
+ </map>
+
+ <!-- Imagen con CSS al centro -->
+ <img src="alcornocal-2.jpg" alt="Parque del Alcornocal Cádiz con arroyo" class="imagen-centro" aria-describedby="descripcion-imagen3">
+ <p id="descripcion-imagen3">Vista del Parque del Alcornocal en Cádiz, mostrando un arroyo en el paisaje.</p>
+
+ <!-- Lista de enlaces, cada enlace tiene aria-label que describe su propósito -->
+ <section>
+    <h2>Enlaces de interés sobre Parques Nacionales</h2>
+    <ul>
+        <li><a href="https://www.miteco.gob.es/es/parques-nacionales-oapn/red-parques-nacionales/parques-nacionales.html" target="_blank" aria-label="Enlace a la página oficial de Parques Nacionales de España">Página oficial de Parques Nacionales (España)</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Parque_nacional" target="_blank" aria-label="Enlace a Wikipedia sobre Parques Nacionales">Wikipedia - Parques Nacionales</a></li>
+        <li><a href="https://www.nationalparks.org/" target="_blank" aria-label="Enlace a la organización de Parques Naturales de EE.UU.">Organización de Parques Naturales (EE.UU.)</a></li>
+    </ul>
+</section>
+
+ <!-- Sección introductoria con id para anclaje, se añade aria-label para más claridad -->
+ <section id="introduccion" aria-label="Introducción al portfolio de ilustraciones">
+    <h1>Bienvenido a mi portfolio</h1>
+    <p>Esta página está dedicada a compartir ilustraciones únicas y diseños personalizados que he creado con <b>pasión</b>, <b>creatividad</b> y un <u>enfoque artístico que te sorprenderá</u>.</p>
+
+    <h2>¿Qué encontrarás aquí?</h2>
+    <p>En mi portfolio encontrarás proyectos de <b>diseño gráfico</b>, arte digital y encargos <u>personalizados</u>.</p>
+
+    <h3>Ilustraciones digitales</h3>
+    <p>Descubre una colección de obras creadas con <b>técnicas digitales modernas</b>, colores vibrantes y un <u>estilo que recuerda al cómic de los 90's</u>.</p>
+
+    <h4>El pack completo de diseño gráfico</h4>
+    <p>Desde logotipos hasta banners, cada diseño combina originalidad, funcionalidad y <u>versatilidad</u>.</p>
+
+    <h5>Proyectos personalizados</h5>
+    <p>Si necesitas una obra hecha especialmente para ti, trabajaremos juntos para lograr un resultado impactante y <u>auténtico</u>.</p>
+
+    <h6>Contacto y encargos</h6>
+    <p><small>No dudes en escribirme para comentarme tu proyecto y trabajar codo con codo. ¡Estoy aquí para ayudarte a materializar tus ideas!</small></p>
+</section>
+
+ <!-- Imagen con CSS a la derecha -->
+ <img src="alcornocal-3.jpg" alt="Parque del Alcornocal Cádiz con arroyo" class="imagen-derecha" aria-describedby="descripcion-imagen4">
+ <p id="descripcion-imagen4">Paisaje del Parque del Alcornocal en Cádiz con un arroyo en primer plano.</p>
+
+ <section id="elementos-parque">
+    <h2>Elementos que componen un Parque Natural</h2>
+    <ul>
+        <li>Árboles</li>
+        <li>Flores</li>
+        <li>Aves</li>
+        <li>Insectos
+            <ul>
+                <li>Hormigas</li>
+                <li>Escarabajos</li>
+                <li>Abejas</li>
+                <li>Mariposas</li>
+            </ul>
+        </li>
+        <li>Arbustos</li>
+    </ul>
+</section>
+
+<section id="tipos-animales">
+    <h2>Tipos de animales que vemos con más frecuencia en este Parque Natural</h2>
+    <ol>
+        <li>Insectos
+            <ul>
+                <li>Hormigas</li>
+                <li>Escarabajos</li>
+                <li>Abejas</li>
+                <li>Mariposas</li>
+            </ul>
+        </li>
+        <li>Aves</li>
+        <li>Mamíferos</li>
+        <ul>
+            <li>Ardillas</li>
+            <li>Conejos</li>
+            <li>Ratones</li>
+        </ul>
+        <li>Reptiles</li>
+    </ol>
+</section>
+
+<!-- Sección de alto contraste -->
+<section class="seccion-alto-contraste">
+    <!-- El contraste de colores es esencial para la accesibilidad, ya que mejora la legibilidad del contenido para personas con discapacidad visual, además al hacer un resaltado podemos dirigir la atención del user hacia un msj atractivo -->
+    <h2>CONSIGUE TU CUPÓN DTO. PARA UNA VISITA GUIADA</h2>
+    <p>Se de los primeros en conseguir tu cupón descuento - ¡Disponible por tiempo limitado!</p>
+    <a href="https://www.tripadvisor.com/AttractionProductReview-g60491-d11453305-From_Jackson_Hole_Yellowstone_Old_Faithful_Waterfalls_and_Wildlife_Day_Tour-Jackson.html" target="_blank" role="link" 
+    aria-label="Enlace a la página de visita guiada en Yellowstone con cupón descuento">Consíguelo aquí</a>
+</section>
+
+
+<footer role="contentinfo">
+    <!-- La etiqueta footer se utiliza para contenido final de la página -->
+    ©2024 David Benitez. Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
